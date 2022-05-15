@@ -26,8 +26,21 @@ void testEquality() {
 
 컴파일은 성공하지만, 테스트에 실패하게 된다. 빠르게 초록 막대를 보기 위해 가짜 구현을 해보자.
 ```JAVA
-public boolean equals(Object object) {
-  return true;    //단순히 true를 반환하게 구현
+public class Dollar{  
+  public int amount;
+  
+  public Dollar(int amount){
+    this.amount = amount;
+  }
+  
+  public void times(int multiplier){
+    amount = amount * multiplier;
+    return null;
+  }
+  
+  public boolean equals(Object object) {
+    return true;    //단순히 true를 반환하게 구현
+  }
 }
 ```
 
@@ -51,9 +64,22 @@ void testEquality() {
 
 테스트는 당연히 실패할 것이고, 이제 동치성(equality)을 일반화해야한다.
 ```JAVA
-public boolean equals(Object object) {
-  Dollar dollar = (Dollar) object;
-  return amount == dollar.amount;
+public class Dollar{  
+  public int amount;
+  
+  public Dollar(int amount){
+    this.amount = amount;
+  }
+  
+  public void times(int multiplier){
+    amount = amount * multiplier;
+    return null;
+  }
+  
+  public boolean equals(Object object) {
+    Dollar dollar = (Dollar) object;
+    return amount == dollar.amount;
+  }
 }
 ```
 또한, 켄트벡은 어떻게 리팩토링 해야 할지 전혀 감이 오질 않을 때만 삼각측량 전략을 사용한다고 말한다.
