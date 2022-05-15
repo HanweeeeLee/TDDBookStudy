@@ -67,7 +67,7 @@ public class Dollar{
 마지막으로 amount필드를 추가해주자
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
   }
@@ -81,7 +81,7 @@ public class Dollar{
 우리는 10을 바랐지만 값은 0으로 나왔다. 우선 테스트를 통과하기 위해서 아래와 같이 수정한 후 다시 실행해보자.
 ```JAVA
 public class Dollar{  
-  public int amount = 10; //수정
+  int amount = 10; //수정
   
   public Dollar(int amount){
   }
@@ -106,7 +106,7 @@ public class Dollar{
 이번 경우에는 코드가 아닌 데이터의 중복이 있는 것을 확인할 수 있다.  
 ```JAVA
 public class Dollar{  
-  public int amount = 5 * 2;    //중복된 데이터
+  int amount = 5 * 2;    //중복된 데이터
   
   public Dollar(int amount){
   }
@@ -119,7 +119,7 @@ public class Dollar{
 하지만 5와 2 를 한번에 제거할 수 있는 방법은 없으니, amount 초기화 단계를 times() 메서드 안으로 옮겨 보자. 
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
   }
@@ -134,7 +134,7 @@ public class Dollar{
 이건 생성자를 통해서 넘어오는 값이기 때문에 amount 초기화 단계를 변경해볼 수 있을 것이다.
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
     this.amount = amount;
@@ -148,7 +148,7 @@ public class Dollar{
 테스트에서 times()의 인자 multiplier 의 값이 2이므로 이것도 중복이며, 상수를 multiplier 로 일반화할 수 있을 것이다.
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
     this.amount = amount;
@@ -162,7 +162,7 @@ public class Dollar{
 times 메서드 안에서의 amount 가 변수도 중복이므로 자바 *= 문법을 통해 간결하게 수정할 수 있다.
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
     this.amount = amount;
