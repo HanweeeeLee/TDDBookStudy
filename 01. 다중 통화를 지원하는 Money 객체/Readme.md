@@ -33,7 +33,7 @@ public class Dollar{
 하나의 에러가 사라졌다. 이제 생성자를 만들어보자. 그냥 컴파일만 넘어갈수있게 생성자 안에서는 아무것도 하지 않아도 된다.
 ```JAVA
 public class Dollar{  
-  Dollar(int amount){
+  public Dollar(int amount){
   }
 }
 ```
