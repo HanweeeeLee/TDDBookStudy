@@ -91,10 +91,10 @@ public class Dollar{
 > ~~$5 * 2 = 10$~~  
 > amount를 private으로 만들기  
 > ~~Dollar 부작용(side effect)?~~  
-> Money 반올림?
-> ~~equals()~~
-> hashCode()
-> Equal null
+> Money 반올림?  
+> ~~equals()~~  
+> hashCode()  
+> Equal null  
 > Equal object
 
 지금까지 동일성 문제는 일시적으로 해결됐다.  
