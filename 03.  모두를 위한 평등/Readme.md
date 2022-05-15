@@ -10,7 +10,7 @@
 > ~~$5 * 2 = 10$~~  
 > amount를 private으로 만들기  
 > ~~Dollar 부작용(side effect)?~~  
-> Money 반올림?
+> Money 반올림?  
 > **equals()**  
 > hashCode()
 
