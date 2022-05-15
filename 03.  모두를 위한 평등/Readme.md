@@ -11,7 +11,7 @@
 > amount를 private으로 만들기  
 > ~~Dollar 부작용(side effect)?~~  
 > Money 반올림?
-> **equals()**
+> **equals()**  
 > hashCode()
 
 만약 Dollar를 해시 테이블의 키로 쓸 생각이라면 equals()를 구현할 때에 hashCode()를 같이 구현해야 하므로,  
