@@ -27,7 +27,7 @@ void testEquality() {
 컴파일은 성공하지만, 테스트에 실패하게 된다. 빠르게 초록 막대를 보기 위해 가짜 구현을 해보자.
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
     this.amount = amount;
@@ -65,7 +65,7 @@ void testEquality() {
 테스트는 당연히 실패할 것이고, 이제 동치성(equality)을 일반화해야한다.
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
     this.amount = amount;
