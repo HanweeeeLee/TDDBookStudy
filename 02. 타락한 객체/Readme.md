@@ -52,7 +52,7 @@ public void testMultiplication(){
 Dollar.times()를 아래와 같이 수정하기 전에는 새 테스트는 컴파일 조차 되지 않을 것이다.
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
     this.amount = amount;
@@ -69,7 +69,7 @@ public class Dollar{
 테스트를 통과하기 위해서는 올바른 금액을 갖는 새 Dollar를 반환해야 한다.
 ```JAVA
 public class Dollar{  
-  public int amount;
+  int amount;
   
   public Dollar(int amount){
     this.amount = amount;
