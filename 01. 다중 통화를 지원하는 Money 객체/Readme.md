@@ -17,8 +17,7 @@ public void testMultiplication(){
   assertEquals(10, five.amount);
 }
 ```
-작성한 위 테스트는 아직 컴파일조차 되지 않는다.  
-현재 네개의 컴파일 에러가 있는데, 살펴보면
+작성한 위 테스트는 아직 컴파일조차 되지 않는다. 현재 상태에서는 네개의 컴파일 에러가 있는데, 살펴보자면
  - Dollar 클래스가 없음
  - 생성자가 없음
  - times(int) 메서드가 없음
