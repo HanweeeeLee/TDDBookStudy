@@ -172,3 +172,11 @@ public class Dollar{
 ```
 
 ## 결론
+### 테스트 목록
+> $5 + 10CHF = $10(환율이 2:1 일 경우)  
+> ~~$5 * 2 = 10$~~  
+> amount를 private으로 만들기  
+> Dollar 부작용(side effect)?  
+> Money 반올림?
+
+이제 첫번째 테스트에 완료 표시를 할수 있게 되었다. 다음장에서는 Dollar 부작용에 대한 작업을 하게 될것이다.  
