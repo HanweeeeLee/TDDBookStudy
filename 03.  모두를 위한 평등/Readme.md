@@ -10,8 +10,8 @@
 > ~~$5 * 2 = 10$~~  
 > amount를 private으로 만들기  
 > ~~Dollar 부작용(side effect)?~~  
-> Money 반올림?
-> **equals()**
+> Money 반올림?  
+> **equals()**  
 > hashCode()
 
 만약 Dollar를 해시 테이블의 키로 쓸 생각이라면 equals()를 구현할 때에 hashCode()를 같이 구현해야 하므로,  
@@ -91,10 +91,10 @@ public class Dollar{
 > ~~$5 * 2 = 10$~~  
 > amount를 private으로 만들기  
 > ~~Dollar 부작용(side effect)?~~  
-> Money 반올림?
-> ~~equals()~~
-> hashCode()
-> Equal null
+> Money 반올림?  
+> ~~equals()~~  
+> hashCode()  
+> Equal null  
 > Equal object
 
 지금까지 동일성 문제는 일시적으로 해결됐다.  
