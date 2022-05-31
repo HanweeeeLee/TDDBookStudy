@@ -293,6 +293,7 @@ public class Dollar extends Money {
         return amount == money.amount;
     }
 }
+```
 
 ## 결론
  - 다른 부분들(통화)을 호출자로 옮겨서 두 생성자를 일치시켰다.
