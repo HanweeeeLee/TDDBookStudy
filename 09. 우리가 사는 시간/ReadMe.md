@@ -218,6 +218,7 @@ public class Dollar extends Money {
 }
 ```
 최종적으로 두 생성자가 이제 동일해졌다. 구현을 상위 클래스로 올리도록 하자.
+```JAVA
 // Money 클래스
 abstract class Money {
     protected int amount;
