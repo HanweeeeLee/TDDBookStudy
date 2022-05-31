@@ -129,7 +129,6 @@ public void testFrancMultiplication() {
 }
 
 //Money 클래스
-```JAVA
 abstract class Money {
   protected int amount;
   abstract Money times(int multiplier);  
