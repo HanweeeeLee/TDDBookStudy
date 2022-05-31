@@ -48,6 +48,7 @@ Money의 두 하위 클래스는 그다지 많은 일을 하는거 같지 않으
 그러므로 작은 단위로서 하위 클래스에 대한 직접적인 참조를 제거해 보도록 하자.
 일단 Money에 Dollar를 반환하는 팩토리 메서드를 도입해보자
 ```JAVA
+@Test
 void testMultiplication() {
   Dollar five = Money.dollar(5);
   assertEquals(new Dollar(10), five.times(2));
