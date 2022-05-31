@@ -208,3 +208,21 @@ class Money {
  - 단지 디버깅을 위해 toString()을 작성했다.
  - Franc 대신 Money를 반환하는 변경을 시도한 뒤 그것이 잘 작동할지를 테스트가 말하도록 했다.
  - 실험해본 걸 뒤로 물리고 또 다른 테스트를 작성했다. 테스트를 작동했더니 실험도 제대로 작동했다.
+
+## TODO)
+ - $5 + 10CHF = $10(환율이 2:1일 경우)
+ - ~~$5 X 2 = $10~~
+ - ~~amount를 private으로 만들기~~
+ - ~~Dollar 부작용?~~
+ - Money 반올림?
+ - ~~equals()~~
+ - hasCode()
+ - Equal null
+ - Equal Object
+ - ~~5CHF X 2 = 10CHF~~
+ - Dollar/Franc 중복
+ - ~~공용 equals~~
+ - ~~**공용 times**~~
+ - ~~Franc과 Dollar 비교하기~~
+ - ~~통화?~~
+ - testFrancMultiplication을 지워야 할까?
