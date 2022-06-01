@@ -38,7 +38,7 @@ public void testSimpleAddition() {
 ```JAVA
 class Money {
 	Money plus(Money addend) {
-		return enw Money(amount + addend.amount, currency);
+		return new Money(amount + addend.amount, currency);
 	}
 }
 ```
@@ -80,7 +80,7 @@ Money.plus()는 Expression을 반환해야 한다. 이건 Money가 Expression을
 class Money implements Expression {
 	...
 	Expression plus(Money addend) {
-		return enw Money(amount + addend.amount, currency);
+		return new Money(amount + addend.amount, currency);
 	}
 }
 ```
