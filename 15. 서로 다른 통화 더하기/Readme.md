@@ -105,17 +105,17 @@ public class Sum implements Expression {
 Sum을 변경해 주었으니, plus()의 인자가 Expression으로 취급될 수 있다.
 ```JAVA
 //Money 클래스
-Expression times(int multiplier) {
-  return new Money(amount*multiplier, currency);
-};
+Expression plus(Expression addend) {
+  return new Sum(this, addend);
+}
 ```
 
 times() 의 반환 값도 Expression 일수 있다.
 ```JAVA
 //Money 클래스
-Expression plus(Expression addend) {
-  return new Sum(this, addend);
-}
+Expression times(int multiplier) {
+  return new Money(amount*multiplier, currency);
+};
 ```
 
 이제 테스트 케이스에 나오는 plus()의 인자도 바꿀 수 있다.
