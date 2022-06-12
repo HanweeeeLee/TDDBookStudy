@@ -63,8 +63,8 @@ public class Sum implements Expression {
 ```JAVA
 //Sum 클래스
 public class Sum implements Expression {
-	Money augend;
-	Money addend;
+  Money augend;
+  Money addend;
   
   Sum(Money augend, Money addend) {
 		this.addend = addend;
