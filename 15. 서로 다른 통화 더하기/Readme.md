@@ -43,13 +43,13 @@ Sum.reduce()가 인자를 축약하지 않는것 같아 보인다.
 ```JAVA
 //Sum 클래스
 public class Sum implements Expression {
-	Money augend;
-	Money addend;
+  Money augend;
+  Money addend;
   
   Sum(Money augend, Money addend) {
-		this.addend = addend;
-		this.augend = augend;
-	}
+    this.addend = addend;
+    this.augend = augend;
+  }
   
   public Money reduce(Bank bank, String to) {
     int amount = augend.amount + addend.amount;
