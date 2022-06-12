@@ -102,7 +102,7 @@ public void testPlusSameCurrencyReturnsMoney() {
  - ~~Sum.plus~~
  - ~~Expression.times~~
 
-# 우리는
+## 우리는
  - 미래에 코드를 읽을 다른 사람들을 염두에 둔 테스트를 작성했다.
  - TDD와 여러분의 현재 개발 스타일을 비교해 볼수 있는 실험방법을 제시했다.
  - 또 한번 선언부에 대한 수정이 시스템 나머지 부분으로 번져갔고, 문제를 고치기 위해 역시 컴파일러의 조언을 따랐다.
