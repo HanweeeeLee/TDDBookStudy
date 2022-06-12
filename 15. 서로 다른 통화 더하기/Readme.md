@@ -24,7 +24,7 @@ public void testMixedAddition() {
 ```
 
 Money에서 Expression으로 일반화 할때 어설프게 남겨둔 부분들이 많기에 무수히 많은 컴파일 에러가 생기고,  
-이런 컴파일 에러들을 해결해야 한다.  
+이런 컴파일 에러들을 해결해야 한다. 우선 Expression을 다시 Money로 변경해주자.
 ```JAVA
 public void testMixedAddition() {
   Money fiveBucks = Money.dollar(5);    //Expression -> Money로 변경
