@@ -72,7 +72,7 @@ public class Sum implements Expression {
   }
   
   public Money reduce(Bank bank, String to) {
-    int amount = reduce(bank, to).amount + reduce(bank, to).amount;
+    int amount = augend.reduce(bank, to).amount + addend.reduce(bank, to).amount;
     return new Money(amount,to);
   }
   
@@ -86,16 +86,16 @@ public class Sum implements Expression {
 ```JAVA
 //Sum 클래스
 public class Sum implements Expression {
-	Expression augend;
-	Expression addend;
+  Expression augend;
+  Expression addend;
   
   Sum(Expression augend, Expression addend) {
-		this.addend = addend;
-		this.augend = augend;
-	}
+    this.addend = addend;
+    this.augend = augend;
+  }
   
   public Money reduce(Bank bank, String to) {
-    int amount = reduce(bank, to).amount + reduce(bank, to).amount;
+    int amount = augend.reduce(bank, to).amount + addend.reduce(bank, to).amount;
     return new Money(amount,to);
   }
   
