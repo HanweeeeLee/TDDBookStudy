@@ -331,7 +331,57 @@ class Account {
 > 이제 OverallAccount에 대한 문제는 사라졌다. OverallAccount는 단지 Account를 담고 있는 Account일 뿐이다.
 
 ## 수집 매개 변수
-여러 객체에 걸쳐 존재하는 오퍼레이션의 결과를 수집하려면 어떻게 해야할까?
+여러 객체에 걸쳐 존재하는 오퍼레이션의 결과를 수집하려면 어떻게 해야할까? 결과가 수집될 객체를 각 오퍼레이션의 매개 변수로 추가한다.  
+  
+ex) writeExternal 메서드는 객체와 그 객체가 참조하는 모든 객체를 기록한다. 모든 객체가 기록되기 위해서는 이것들이 모두 느슨하게 협력해야 하므로, 메서드는 수집 매개 변수로서 ObjectOutput을 전달한다.
+```Java
+class java.io.Externalizable {
+    public interface Externalizable extends java.io.serializable {
+        void writeExternal(ObjectOutput out) throws IOException;
+    }
+
+}
+```
+
+Expression을 출력하려 한다고 자정해보자. 우리가 원하는게 평범한 문자열이라면 단순한 문자열 결합으로도 충분하다. 
+```JAVA
+testSumPrinting() {
+    Sum sum = new Sum(Money.dollar(5), Money.franc(7));
+    assertEquals("5 USD + 7CHF", sum.toString());
+}
+
+String toString() {
+    return augend + " + " + addend
+}
+```
+하지만 수식을 트리 형태로 들여쓰기하길 원한다면 코드는 다음과 같아질 것이다. 
+```JAVA
+testSumPrinting() {
+    Sum = sum new Sum(Money.dollar(5), Money.franc(7));
+    assertEquals("+\n\t5 USD\n\t7CHF", sum.toString());
+}
+```
+
+그러면 우리는 다음과 같은 수집 매개 변수를 도입해야한다.
+```Java
+String toString() {
+    IndentingStream writer = new IndentingStream();
+    toString(writer);
+    return writer.contents();
+}
+
+void toString(IndentingWriter writer) {
+    writer.println("+");
+    writer.indent();
+    augend.toString(writer);
+    writer.println();
+    addend.toString(writer);
+    writer.exdent();
+}
+```
+
+## 싱글톤
+전역 변수를 제공하지 않는 언어에서는 전역변수를 사용하지 말자.
 
 
 
